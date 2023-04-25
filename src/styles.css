@@ -1,0 +1,42 @@
+._container {
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  @media (min-width: 576px) {
+    ._container {
+      max-width: 150px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    ._container {
+      max-width: 200px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    ._container {
+      max-width: 300px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    ._container {
+      max-width: 350px;
+    }
+  }
+
+  .img{
+    width: 50px;
+  }
+  .mtt{
+    margin-top: 100px;
+  }
+  label {
+    text-align: left;
+  }
+  ._container label {
+    text-align: left;
+  }
+  
