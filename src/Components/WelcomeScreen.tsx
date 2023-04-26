@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 export default function WelcomeScreen() {
-  return (
-    <div>
-      welcome screen
-    </div>
-  )
+  const navigate =useNavigate();
+  useEffect(() => {
+    setTimeout(() => {
+      navigate('/login')
+    }, 200);
+  }, [navigate]);
+  return <div>welcome screen</div>;
 }

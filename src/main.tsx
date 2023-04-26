@@ -15,6 +15,7 @@ const AppNavigator: React.FC<Props> = () => {
       path: "/",
       element: <WelcomeScreen />,
       children: [{ index: true }],
+      
     },
     {
       element: <AppIndex />,
