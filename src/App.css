@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+.auth_div {
+  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='250' preserveAspectRatio='none' viewBox='0 0 1440 250'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1035%26quot%3b)' fill='none'%3e%3crect width='1440' height='250' x='0' y='0' fill='rgba(64%2c 5%2c 17%2c 1)'%3e%3c/rect%3e%3cpath d='M23 250L273 0L367.5 0L117.5 250z' fill='url(%23SvgjsLinearGradient1036)'%3e%3c/path%3e%3cpath d='M277.6 250L527.6 0L646.1 0L396.1 250z' fill='url(%23SvgjsLinearGradient1036)'%3e%3c/path%3e%3cpath d='M520.2 250L770.2 0L1067.2 0L817.2 250z' fill='url(%23SvgjsLinearGradient1036)'%3e%3c/path%3e%3cpath d='M759.8000000000001 250L1009.8000000000001 0L1234.8000000000002 0L984.8000000000001 250z' fill='url(%23SvgjsLinearGradient1036)'%3e%3c/path%3e%3cpath d='M1409 250L1159 0L961 0L1211 250z' fill='url(%23SvgjsLinearGradient1037)'%3e%3c/path%3e%3cpath d='M1196.4 250L946.4000000000001 0L788.9000000000001 0L1038.9 250z' fill='url(%23SvgjsLinearGradient1037)'%3e%3c/path%3e%3cpath d='M922.8 250L672.8 0L486.79999999999995 0L736.8 250z' fill='url(%23SvgjsLinearGradient1037)'%3e%3c/path%3e%3cpath d='M684.1999999999999 250L434.19999999999993 0L195.69999999999993 0L445.69999999999993 250z' fill='url(%23SvgjsLinearGradient1037)'%3e%3c/path%3e%3cpath d='M1231.7002104668643 250L1440 41.70021046686438L1440 250z' fill='url(%23SvgjsLinearGradient1036)'%3e%3c/path%3e%3cpath d='M0 250L208.29978953313562 250L 0 41.70021046686438z' fill='url(%23SvgjsLinearGradient1037)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1035'%3e%3crect width='1440' height='250' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1036'%3e%3cstop stop-color='rgba(226%2c 174%2c 68%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(226%2c 174%2c 68%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1037'%3e%3cstop stop-color='rgba(226%2c 174%2c 68%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(226%2c 174%2c 68%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e"); */
+}
+.label {
+  font-size: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input_field {
+  border: 1px solid #dfdfdf;
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input_field:focus {
+  outline: 2px solid #dfdfdf;
+}
+.auth_btn {
+  background-color: #f3f3f3;
+  border: 2px solid #dfdfdf;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: black;
+}
+.auth_card {
+  border-radius: 20px !important;
+  border: none !important;
+}
+.auth_mssg {
+  font-size: 12px;
+  color: var(--primaryColor);
+}
+._link {
+  text-decoration: none;
+  color: var(--primaryColor);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.login_with {
+  background-color: white;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.line {
+  position: relative;
+  top: -25px;
+}
+.auth_icon_group {
+  /* display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px; */
+  color: var(--primaryColor);
+}
+.auth_icon_div {
+  border: 2px solid rgb(223, 223, 223);
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 100%;
+  transition: 200ms;
+}
+.auth_icon_div:hover {
+  cursor: pointer;
+  background-color: rgb(243, 243, 243);
+}
+.card_title {
+  font-weight: 900;
+}
+.feed_card {
+  border-radius: 10px !important;
+}
+.btn_grp {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.app_btn {
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  background-color: #f3f3f3;
+  padding: 5px 15px;
+  /* font-size: 13px; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.in_app_title {
+  font-weight: 500;
+}
+.service_div {
+  background-color: #f3f3f3;
+  /* border: 1px solid#dfdfdf; */
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.auth_icon{
+  width: 50px;
+  /* text-align: center; */
 }
