@@ -58,7 +58,7 @@ function Register() {
             <div>
               <button
                 type="submit"
-                className="auth_btn mt-3"
+                className="auth_btn mt-3 mb-3"
                 onClick={() => navigate("/feed")}
               >
                 Register

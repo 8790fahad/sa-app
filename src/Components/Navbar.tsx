@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Row className="navbar_ m-0 p-0" style={{}}>
+      <Row className="navbar_ m-0 p-0 shadow-sm" style={{}}>
         <Col md={6} sm={6} xs={6} className="left_col_nav p-0">
           <img
             src={require("../img/logo.png")}
@@ -21,7 +21,7 @@ export default function Navbar() {
         </Col>
         <Col md={6} sm={6} xs={6} className="right_col_nav m-0 p-0">
           <div style={{ float: "right" }}>
-            <BsPlus style={{ color: "white", fontSize: 40 }} onClick={toggle} />
+            <BsPlus style={{ fontSize: 40, color:'grey' }} onClick={toggle} />
             <img
               src={require("../img/Capture.jpg")}
               className="p_p"
