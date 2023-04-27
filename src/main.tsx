@@ -6,6 +6,7 @@ import AppIndex from "./Routes/AppIndex";
 import Feed from "./Components/Feed";
 import Chat from "./Components/Chat";
 import Register from "./Components/Register";
+import Profile from "./Components/Profile";
 
 interface Props {}
 
@@ -27,6 +28,10 @@ const AppNavigator: React.FC<Props> = () => {
         {
           path: "/chat",
           element: <Chat />,
+        },
+        {
+          path: "/profile",
+          element: <Profile />,
         },
       ],
     },

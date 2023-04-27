@@ -97,7 +97,23 @@
   border-radius: 10px;
   margin-bottom: 15px;
 }
-.auth_icon{
+.auth_icon {
   width: 50px;
   /* text-align: center; */
+}
+
+/* ///////////////////////////////////// */
+
+.navbar_ {
+  height: 50px;
+  background-color: rgb(145, 0, 44);
+  margin: 0;
+  width: 100%;
+}
+
+.p_p{
+  width: 35px;
+  /* float: right !important; */
+  margin: 5px;
+  border-radius: 50%;
 }
