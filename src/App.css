@@ -59,6 +59,7 @@
   padding: 10px 20px;
   border-radius: 5px;
   width: 100%;
+  color: black;
   transition: 200ms;
 }
 .auth_icon_div:hover {
@@ -80,6 +81,7 @@
 .app_btn {
   border-radius: 5px;
   padding: 5px;
+  color: black;
   border: none;
   background-color: #f3f3f3;
   padding: 5px 15px;
@@ -140,10 +142,10 @@
   border-radius: 5px;
   resize: none;
 }
-.message_text_area:focus{
+.message_text_area:focus {
   outline: none;
 }
-.mssg{
+.mssg {
   display: flex;
   justify-content: flex-start;
   background-color: #9c9c9c;
@@ -152,6 +154,6 @@
   border-radius: 20px;
   margin: 5px;
 }
-.send_btn{
+.send_btn {
   font-size: 30px;
 }
