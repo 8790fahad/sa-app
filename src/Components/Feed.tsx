@@ -111,7 +111,7 @@ export default function Feed() {
         </div>
           <textarea
             className="message_text_area"
-            placeholder="Post here..."
+            placeholder="Write here..."
             rows={2}
           ></textarea>
            <div className="post_at_div">
