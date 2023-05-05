@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { FaEllipsisV } from "react-icons/fa";
 import { MdSend } from "react-icons/md";
+import { Col, Row } from "reactstrap";
 
 export default function Chat() {
   const [message, setMessage] = useState("");
@@ -12,10 +14,18 @@ export default function Chat() {
   return (
     <div>
       <div className="p-3">
-        <h5 className="in_app_title">Chat</h5>
-        <p className="m-0">Start conversation with your friends</p>
+        <Row className="p-1">
+          <Col md={10} sm={10} xs={10}>
+            <h5 className="in_app_title">Chat</h5>
+            <p className="m-0">Start conversation with your friends</p>
+          </Col>
+
+          <Col md={2} sm={2} xs={2}>
+            <FaEllipsisV style={{ float: "right" }} />
+          </Col>
+        </Row>
       </div>
-      <div className="mg-danger">
+      <div className="">
         {chat.slice(1).map((item) => (
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <div className="mssg">

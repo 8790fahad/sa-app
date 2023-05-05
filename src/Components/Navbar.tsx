@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { BsPlus } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { Col, Modal, Row } from "reactstrap";
 
@@ -21,12 +20,13 @@ export default function Navbar() {
         </Col>
         <Col md={6} sm={6} xs={6} className="right_col_nav m-0 p-0">
           <div style={{ float: "right" }}>
-            <BsPlus style={{ fontSize: 40, color:'grey' }} onClick={toggle} />
+            {/* <BsPlus style={{ fontSize: 40, color:'grey' }} onClick={toggle} /> */}
+            <button className="app_btn m-0" onClick={toggle} style={{fontSize:12}}>Request</button>
             <img
               src={require("../img/Capture.jpg")}
               className="p_p"
               onClick={() => navigate("/profile")}
-              alt='profile_pic'
+              alt="profile_pic"
             />
           </div>
         </Col>

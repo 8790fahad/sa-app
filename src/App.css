@@ -23,6 +23,15 @@
   border-radius: 5px;
   color: black;
 }
+.post_btn {
+  background-color: #6bbd8c;
+  color: white;
+  width: 100%;
+  /* padding: 10px; */
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+}
 .auth_card {
   border-radius: 20px !important;
   border: none !important;
@@ -75,7 +84,10 @@
 .btn_grp {
   display: flex;
   gap: 10px;
-  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  /* justify-content: center; */
+  color: grey;
 }
 
 .app_btn {
@@ -156,4 +168,35 @@
 }
 .send_btn {
   font-size: 30px;
+}
+.post_at_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post_section {
+  background-color: #f3f3f3;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.post_icon {
+  font-size: 20px;
+  /* margin-right: 5px; */
+  color: grey;
+}
+.icon_spn {
+  margin-right: 10px;
+}
+.right_col_nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.switch_div {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  /* height: 20px; */
+  /* width: 100%; */
 }

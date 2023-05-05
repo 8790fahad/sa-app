@@ -16,7 +16,6 @@ const AppNavigator: React.FC<Props> = () => {
       path: "/",
       element: <WelcomeScreen />,
       children: [{ index: true }],
-      
     },
     {
       element: <AppIndex />,
@@ -35,6 +34,10 @@ const AppNavigator: React.FC<Props> = () => {
           element: <Profile />,
         },
       ],
+    },
+    {
+      path: "/welcome",
+      element: <WelcomeScreen />,
     },
     {
       path: "/login",

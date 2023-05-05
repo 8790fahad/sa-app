@@ -1,11 +1,17 @@
-import React from "react";
-import { Card, Col, Row } from "reactstrap";
-import { BsChat, BsShare } from "react-icons/bs";
+import React, { useState } from "react";
+import { Card, Col, Modal, Row } from "reactstrap";
+import { BsCameraFill, BsImageFill } from "react-icons/bs";
 import { FaEllipsisV } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-
+import { MdLocationOn } from "react-icons/md";
+import {TbShare3} from 'react-icons/tb'
+import { AiOutlineHeart } from "react-icons/ai";
 export default function Feed() {
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+  const toggle = () => {
+    setOpen(!open);
+  };
   const feed = [
     {
       image: (
@@ -23,6 +29,23 @@ export default function Feed() {
   ];
   return (
     <div>
+      <div className="post_section p-3">
+        <div className="message_text_area text-secondary mb-1" onClick={toggle}>
+          Post here..
+        </div>
+
+        <div className="post_at_div">
+          <BsImageFill className="post_icon" />
+          <span className="icon_spn">Photo</span>
+          <BsCameraFill className="post_icon" />
+          <span className="icon_spn">Video</span>
+          <MdLocationOn className="post_icon" />
+          <span className="icon_spn">Location</span>
+        </div>
+        {/* <div>
+          <button className="post_btn">Post</button>
+        </div> */}
+      </div>
       <Row className="m-0">
         <Col md={4}></Col>
         <Col md={4} className="p-3">
@@ -58,18 +81,19 @@ export default function Feed() {
                 <h6>{item.post}</h6>
               </div>
               <Row className="p-2">
-                <Col md={4} sm={4} xs={4}>
-                  <button className="app_btn" onClick={() => navigate("/chat")}>
-                    <BsChat />
-                  </button>
-                </Col>
                 <Col md={8} sm={8} xs={8}>
-                  <div className="btn_grp" style={{ float: "right" }}>
-                    <button className="app_btn">
-                      <BsShare />
-                    </button>
-                    <button className="app_btn cnt">Connect</button>
+                  <div className="btn_grp">
+                    <AiOutlineHeart />
+                    <TbShare3/>
                   </div>
+                </Col>
+                <Col md={4} sm={4} xs={4}>
+                  <button
+                    className="app_btn cnt"
+                    onClick={() => navigate("/chat")}
+                  >
+                    Connect
+                  </button>
                 </Col>
               </Row>
             </Card>
@@ -77,6 +101,16 @@ export default function Feed() {
         </Col>
         <Col md={4}></Col>
       </Row>
+
+      <Modal isOpen={open} toggle={toggle}>
+        <div className="p-3">
+          <textarea
+            className="message_text_area"
+            placeholder="Post here..."
+            rows={1}
+          ></textarea>
+        </div>
+      </Modal>
     </div>
   );
 }

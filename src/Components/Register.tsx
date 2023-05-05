@@ -1,87 +1,62 @@
-import React from "react";
-import { BsFacebook, BsGoogle } from "react-icons/bs";
+import React, { useState } from "react";
 import "../styles.css";
-// import img from "./img/logo.png";
-import { useNavigate } from "react-router-dom";
-import {  Col, Row } from "reactstrap";
+import { Col, Row } from "reactstrap";
+import Individual from "./Individual";
+import Specialty from "./Specialty";
 function Register() {
-  const navigate = useNavigate();
+  const [page, setPage] = useState(false);
+
   return (
-    <div className="auth_div mt-2">
+    <div className="auth_div">
       <Row className="m-0">
         <Col md={4}></Col>
         <Col md={4} className="p-4">
-        <div className="text-center mb-4">
-            <img src={require("../img/logo.png")} className="auth_icon" alt='logo'/>
+          <div className="text-center mb-4">
+            <img
+              src={require("../img/logo.png")}
+              className="auth_icon"
+              alt="logo"
+            />
           </div>
           {/* <Card className="p-4 auth_card shadow"> */}
           <form className="">
-            <h3 className="card_title text-center">Register Here</h3>
-            <div>
-              <label className="label">Full Name</label>
+            <h3 className="card_title text-center">Register As...</h3>
+            <div className="switch_div" style={{ marginTop: 15 }}>
               <div>
-                <input
-                  type="email"
-                  className="input_field"
-                  id="exampleInputEmail1"
-                />
+                <p
+                  className="login_register"
+                  style={{
+                    borderBottom: "1px solid grey",
+                    paddingBottom: 10,
+                    width: "fit-content",
+                  }}
+                >
+                  <span
+                    style={{
+                      borderBottom: page ? "" : `3px solid #6bbd8c`,
+                      marginRight: 20,
+                      paddingBottom: 10,
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setPage(false)}
+                  >
+                    Individual
+                  </span>
+                  <span
+                    style={{
+                      borderBottom: page ? `3px solid #6bbd8c` : "",
+                      marginLeft: 20,
+                      paddingBottom: 10,
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setPage(true)}
+                  >
+                    Specialty
+                  </span>
+                </p>
               </div>
             </div>
-            <div>
-              <label className="label">Phone</label>
-              <div>
-                <input
-                  type="email"
-                  className="input_field"
-                  id="exampleInputEmail1"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="label">Email address</label>
-              <div>
-                <input
-                  type="email"
-                  className="input_field"
-                  id="exampleInputEmail1"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="label mt-2" htmlFor="password">
-                Password
-              </label>
-              <div>
-                <input type="password" className="input_field" id="password" />
-              </div>
-            </div>
-            <div>
-              <button
-                type="submit"
-                className="auth_btn mt-3 mb-3"
-                onClick={() => navigate("/feed")}
-              >
-                Register
-              </button>
-            </div>
-
-            <div className="text-center">
-              <p className="auth_mssg login_with">Or</p>
-            </div>
-            <hr className="m-0 line" />
-            <div className="auth_icon_group mb-3">
-              <button className="auth_icon_div">
-                <BsGoogle size="1.5rem" /> Continue with Google
-              </button>
-              <button className="auth_icon_div mt-3" onClick={() => {}}>
-                <BsFacebook size="1.5rem" /> Continue With Facebook
-              </button>
-            </div>
-            <div className="text-center">
-              <p className="auth_mssg">
-                Already have an account? | <span   onClick={() => navigate("/login")}>Login here</span>
-              </p>
-            </div>
+            {!page ? <Individual /> : <Specialty />}
           </form>
           {/* </Card> */}
         </Col>
