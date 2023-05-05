@@ -200,3 +200,8 @@
   /* height: 20px; */
   /* width: 100%; */
 }
+.post_mod_header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

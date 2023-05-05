@@ -3,9 +3,10 @@ import { Card, Col, Modal, Row } from "reactstrap";
 import { BsCameraFill, BsImageFill } from "react-icons/bs";
 import { FaEllipsisV } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { MdLocationOn } from "react-icons/md";
+import { HiOutlineX } from "react-icons/hi";
 import {TbShare3} from 'react-icons/tb'
 import { AiOutlineHeart } from "react-icons/ai";
+import { MdLocationOn } from "react-icons/md";
 export default function Feed() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -104,11 +105,24 @@ export default function Feed() {
 
       <Modal isOpen={open} toggle={toggle}>
         <div className="p-3">
+        <div className='mb-2 post_mod_header'>
+          <h4>Create a post</h4>
+          <HiOutlineX size='2rem' style={{color:'grey'}}/>
+        </div>
           <textarea
             className="message_text_area"
             placeholder="Post here..."
-            rows={1}
+            rows={2}
           ></textarea>
+           <div className="post_at_div">
+          <BsImageFill className="post_icon" />
+          <span className="icon_spn">Photo</span>
+          <BsCameraFill className="post_icon" />
+          <span className="icon_spn">Video</span>
+          <MdLocationOn className="post_icon" />
+          <span className="icon_spn">Location</span>
+        </div>
+          <button className='mt-4 post_btn' onClick={toggle}>Post</button>
         </div>
       </Modal>
     </div>
