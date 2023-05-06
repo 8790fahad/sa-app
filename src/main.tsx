@@ -7,6 +7,13 @@ import Feed from "./Components/Feed";
 import Chat from "./Components/Chat";
 import Register from "./Components/Register";
 import Profile from "./Components/Profile";
+import ShopWithMe from "./Components/ShopWithMe";
+import TailMe from "./Components/TailMe";
+import TravelWithMe from "./Components/TravelWithMe";
+import Recreational from "./Components/Recreational";
+import Notifications from "./Components/Notifications";
+import SpecialOffer from "./Components/SpecialOffer";
+import Location from "./Components/Location";
 
 interface Props {}
 
@@ -33,6 +40,34 @@ const AppNavigator: React.FC<Props> = () => {
           path: "/profile",
           element: <Profile />,
         },
+        {
+          path: "/shop-with-me",
+          element: <ShopWithMe />,
+        },
+        {
+          path: "/tail-me",
+          element: <TailMe />,
+        },
+        {
+          path: "/recreational",
+          element: <Recreational />,
+        },
+        {
+          path: "/travel-with-me",
+          element: <TravelWithMe />,
+        },
+        {
+          path: "/notifications",
+          element: <Notifications />,
+        },
+        {
+          path: "/special-offer",
+          element: <SpecialOffer />,
+        },
+        {
+          path:'/location',
+          element:<Location/>
+        }
       ],
     },
     {

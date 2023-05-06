@@ -107,23 +107,33 @@ export default function Feed() {
         <div className="p-3">
         <div className='mb-2 post_mod_header'>
           <h4>Create a post</h4>
-          <HiOutlineX size='2rem' style={{color:'grey'}}/>
+          <HiOutlineX size='2rem' style={{color:'grey'}} onClick={toggle}/>
         </div>
           <textarea
-            className="message_text_area"
+            className="message_text_area second"
             placeholder="Write here..."
             rows={2}
           ></textarea>
-           <div className="post_at_div">
+          <Row className='d-flex'>
+            <Col sm={6} xs={6}>
+
+             <p>Attach to your post</p>
+            </Col>
+            <Col sm={6} xs={6}>
+
+           <div className="post_at_div" style={{float:'right', gap:10}}>
           <BsImageFill className="post_icon" />
-          <span className="icon_spn">Photo</span>
+          {/* <span className="icon_spn">Photo</span> */}
           <BsCameraFill className="post_icon" />
-          <span className="icon_spn">Video</span>
+          {/* <span className="icon_spn">Video</span> */}
           <MdLocationOn className="post_icon" />
-          <span className="icon_spn">Location</span>
+          {/* <span className="icon_spn">Location</span> */}
         </div>
-          <button className='mt-4 post_btn' onClick={toggle}>Post</button>
+            </Col>
+            </Row>
+          <button className='mt-2 post_btn' onClick={toggle}>Post</button>
         </div>
+          {/* </div> */}
       </Modal>
     </div>
   );

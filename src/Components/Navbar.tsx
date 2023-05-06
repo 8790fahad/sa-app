@@ -6,7 +6,6 @@ export default function Navbar() {
   const navigate = useNavigate();
   const [openModal, setOpenModal] = useState(false);
   const toggle = () => setOpenModal(!openModal);
-
   return (
     <>
       <Row className="navbar_ m-0 p-0 shadow-sm" style={{}}>
@@ -33,13 +32,25 @@ export default function Navbar() {
       </Row>
       <Modal isOpen={openModal} toggle={toggle}>
         <div className="p-3">
-          <h5 className="in_app_title">Request</h5>
-          <p>What service do you require today?</p>
+              <h5 className="in_app_title">Request</h5>
+              <p className='sub_title'>What service do you require today?</p>
           <div>
-            <div className="service_div">Travel with me</div>
-            <div className="service_div">Tail me</div>
-            <div className="service_div"> Shop with me</div>
-            <div className="service_div"> Recreational</div>
+            <div className="service_div"onClick={()=>{
+              toggle()
+              navigate('/travel-with-me')
+              }}>Travel with me</div>
+            <div className="service_div"onClick={()=>{
+              toggle()
+              navigate('/tail-me')
+              }}>Tail me</div>
+            <div className="service_div" onClick={()=>{
+              toggle()
+              navigate('/shop-with-me')
+              }}> Shop with me</div>
+            <div className="service_div" onClick={()=>{
+              toggle()
+              navigate('/recreational')
+              }}> Recreational</div>
           </div>
         </div>
       </Modal>

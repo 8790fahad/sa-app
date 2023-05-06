@@ -5,7 +5,7 @@ export default function Profile() {
     <div>
        <div className="p-3">
         <h5 className="in_app_title">Profile</h5>
-        <p>View and edit your account</p>
+        <p className='sub_title'>View and edit your account</p>
       </div>
     </div>
   )
