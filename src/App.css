@@ -247,3 +247,27 @@
   height: auto !important;
   /* border-radius: 10px; */
 }
+.ppp{
+
+  background-color: #dfdfdf;
+  border-radius: 10px;
+}
+.profile_first_section{
+  gap:15px;
+  display: flex;
+  align-items: center;
+}
+.profile_second_section{
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+.profile_icon{
+  background-color: #dfdfdf;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 35px;
+}
+.in_app_title_2{
+  font-weight: 600;
+  margin: 0;
+}
