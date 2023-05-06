@@ -14,6 +14,7 @@ import Recreational from "./Components/Recreational";
 import Notifications from "./Components/Notifications";
 import SpecialOffer from "./Components/SpecialOffer";
 import Location from "./Components/Location";
+import Distance from "./Components/Distance";
 
 interface Props {}
 
@@ -67,6 +68,10 @@ const AppNavigator: React.FC<Props> = () => {
         {
           path:'/location',
           element:<Location/>
+        },
+        {
+          path:'/distance',
+          element:<Distance/>
         }
       ],
     },

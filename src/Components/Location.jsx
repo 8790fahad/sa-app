@@ -1,10 +1,5 @@
 import React from 'react'
-import { Row, Col } from 'reactstrap'
-import { IoMdSearch } from 'react-icons/io'
-import { RiNotification4Line } from 'react-icons/ri'
-import { MdOutlineLocalOffer } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
-import map from '../img/map.png'
 export default function Location() {
   const navigate = useNavigate()
   return (
@@ -18,6 +13,46 @@ export default function Location() {
           className="input_field"
           placeholder="where would you go?"
         />
+        <div
+          style={{
+            borderBottom: '1px solid #dfdfdf',
+            marginLeft: '5',
+            marginBottom: 5,
+          }}
+          onClick={() => navigate('/distance')}
+        >
+          <p className="mt-4">State Road, Nassarawa, Kano</p>
+        </div>
+        <div
+          style={{
+            borderBottom: '1px solid #dfdfdf',
+            marginLeft: '5',
+            marginBottom: 5,
+          }}
+          onClick={() => navigate('/distance')}
+        >
+          <p className="mt-4">State Road, Nassarawa, Kano</p>
+        </div>{' '}
+        <div
+          style={{
+            borderBottom: '1px solid #dfdfdf',
+            marginLeft: '5',
+            marginBottom: 5,
+          }}
+          onClick={() => navigate('/distance')}
+        >
+          <p className="mt-4">State Road, Nassarawa, Kano</p>
+        </div>{' '}
+        <div
+          style={{
+            borderBottom: '1px solid #dfdfdf',
+            marginLeft: '5',
+            marginBottom: 5,
+          }}
+          onClick={() => navigate('/distance')}
+        >
+          <p className="mt-4">State Road, Nassarawa, Kano</p>
+        </div>
       </div>
     </div>
   )

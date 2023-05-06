@@ -228,11 +228,13 @@
   padding: 3px;
   margin-bottom: 10px;
   border-radius: 20px;
+  margin-bottom: 20px;
   background-color: white;
 }
 .search_loc_div{
   position: absolute;
   bottom: 0;
+  height: 100px;
   width: 100%;
   border-radius: 15px 15px 0 0;
   background-color: #dfdfdf;
@@ -240,4 +242,8 @@
 .notif_div{
   background-color: #dfdfdf;
   padding: 5px;
+}
+.distance_mod{
+  height: auto !important;
+  /* border-radius: 10px; */
 }

@@ -22,9 +22,9 @@ export default function TravelWithMe() {
                </div>
            </Col>
       </Row>
-      {/* <div>
-          <img src={map} className='map'/>
-      </div> */}
+      <div>
+          <img src={map} className='map' alt='map'/>
+      </div>
       <div className='p-2 search_loc_div'>
           <div className='' style={{display:'flex', justifyContent:"center"}}>
               <div className='holder'></div>
