@@ -31,8 +31,10 @@ export default function Feed() {
   return (
     <div>
       <div className="post_section p-3">
-        <div className="message_text_area text-secondary mb-1" onClick={toggle}>
+        <div>
+          <div className="message_text_area text-secondary mb-1" onClick={toggle}>
           Post here..
+        </div>
         </div>
 
         <div className="post_at_div">
