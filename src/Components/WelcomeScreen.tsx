@@ -4,7 +4,7 @@ export default function WelcomeScreen() {
   const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => {
-      navigate("/feed");
+      // navigate("/feed");
     }, 400);
   }, [navigate]);
   return (
